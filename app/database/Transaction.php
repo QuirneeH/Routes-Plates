@@ -2,12 +2,10 @@
 
 namespace App\DataBase;
 
-use mysqli;
+use Exception;
 
-class Transaction
+class Transaction extends Connection
 {
-    private static ?mysqli $connect = null;
-
     /**
      * Inicia uma transação para o banco de dados
      */
@@ -38,4 +36,17 @@ class Transaction
             self::$connect = null;
         }
     }
+
+    /**
+     * Encerra a conexão com o banco de dados caso ela exista
+     */
+    public static function desconnect()
+    {
+        if(!isset(self::$connect)) {
+            throw new Exception("Não existe uma conexão nesse momento", 404);
+            
+        } else {
+            self::$connect = null;
+        }
+    }    
 }

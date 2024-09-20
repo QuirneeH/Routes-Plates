@@ -40,7 +40,11 @@ class View
         echo $templates->render($view, $datas);
     }
 
-    private static function addInstance(string $instanceKey, $instanceClass)
+    /**
+     * @param string $instanceKey Nome do Indice referente a classe a ser instanciada
+     * @param object $instanceClass Instância de uma classe
+     */
+    private static function addInstance(string $instanceKey, object $instanceClass)
     {
         if(!isset(self::$instances[$instanceKey]))
             self::$instances[$instanceKey] = $instanceClass;

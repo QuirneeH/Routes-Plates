@@ -9,10 +9,14 @@ class HomeController
     /**
      * Renderiza a tela inicial da página Home
      */
-    public function index(array $params = []): void
+    public function index(): void
     {
+        $stmt = new \App\Model\User();
+        $user = $stmt->getBy("id_usuario", "1", "apelido");
+        
         View::render('home/main', [
-            "title" => "Ínicio"
+            "title" => "Ínicio",
+            "user" => $user
         ]);
     }
 

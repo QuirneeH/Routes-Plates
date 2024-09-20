@@ -5,7 +5,7 @@ namespace App\Core;
 class Router
 {
     /** 
-     * Lista de rotas 
+     * Lista de rotas a serem adicionadas
      */
     private array $routes = [];
 

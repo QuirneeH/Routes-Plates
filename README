@@ -1,1 +1,17 @@
-EXECUTE O COMANDO EM SEU TERMINAL: "composer init"
+EXECUTE O COMANDO EM SEU TERMINAL: "composer install",
+
+- Controllers:
+
+- Core:
+
+- DataBase:
+
+- Helpers:
+
+- Model:
+
+- Resource:
+
+- Routes:
+
+- .htaccess:
