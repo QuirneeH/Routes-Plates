@@ -8,4 +8,4 @@
 
 <h1>Content HOME</h1>
 
-<?php $instance['home']->teste(); ?>
+<?php $instance['home']::teste(); ?>

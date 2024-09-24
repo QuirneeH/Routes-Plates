@@ -23,7 +23,7 @@ class HomeController
     /**
      * PARA TESTE
      */
-    public function teste(): void
+    public static function teste(): void
     {
         echo('Chamada de uma instancia de HomeController');    
     }

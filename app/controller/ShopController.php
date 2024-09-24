@@ -19,7 +19,7 @@ class ShopController
     /**
      * PARA TESTE
      */
-    public function buy(): void
+    public static function buy(): void
     {
         echo("Compra em R$15.999,90 efetuada com <b style='color: green;'>sucesso</b>");    
     }

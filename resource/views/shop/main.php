@@ -6,4 +6,4 @@
 
 <h1>Content SHOP</h1>
 
-<?= $instance['shop']->buy(); ?>
+<?= $instance['shop']::buy(); ?>
