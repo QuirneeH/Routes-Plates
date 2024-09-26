@@ -14,6 +14,8 @@ class HomeController
         $stmt = new \App\Model\User();
         $user = $stmt->getBy("id_usuario", "1", "apelido");
         
+        View::addInstance('home', new HomeController);
+
         View::render('home/main', [
             "title" => "Ínicio",
             "user" => $user

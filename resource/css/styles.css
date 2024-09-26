@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 15vh auto 15vh;
+}

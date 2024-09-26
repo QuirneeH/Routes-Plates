@@ -18,7 +18,7 @@ class Controller
         if(!str_contains($controller, ':'))
             throw new Exception("Ta sem dois ponto", 505);
 
-        [$controller, $method] = explode(':', $controller);
+        [$controller, $method] = explode('::', $controller);
 
         $controllerNamespace = "App\\Controller\\" . $controller;
 

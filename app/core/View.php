@@ -33,8 +33,6 @@ class View
 
         $view = DIRECTORY_SEPARATOR . $diretory;
 
-        require('app/helper/instances.php');
-
         $templates = new Engine(self::DIRECTORY_VIEW);
         $templates->addData(['instance' => self::$instances]);
         echo $templates->render($view, $datas);
@@ -44,7 +42,7 @@ class View
      * @param string $instanceKey Nome do Indice referente a classe a ser instanciada
      * @param object $instanceClass Instância de uma classe
      */
-    private static function addInstance(string $instanceKey, object $instanceClass)
+    public static function addInstance(string $instanceKey, object $instanceClass)
     {
         if(!isset(self::$instances[$instanceKey]))
             self::$instances[$instanceKey] = $instanceClass;

@@ -13,8 +13,8 @@ class User extends Model
     public readonly string $apelido;
     public readonly string $email;
     public readonly string $senha;
-    public readonly string $criado_em;
-    public readonly string $atualizado_em;
+    public readonly ?string $criado_em;
+    public readonly ?string $atualizado_em;
 
     public function __construct()
     {
