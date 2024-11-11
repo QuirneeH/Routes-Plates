@@ -39,6 +39,9 @@ class View
     }
 
     /**
+     * Gera uma instancia de um Controller existente para ser utilizado nos arquivos
+     * Views
+     * 
      * @param string $instanceKey Nome do Indice referente a classe a ser instanciada
      * @param object $instanceClass Instância de uma classe
      */

@@ -11,13 +11,15 @@ class ShopController
      */
     public function index(): void
     {
+        View::addInstance('shop', new ShopController());
+
         View::render('shop/main', [
-            'title' => "SHOP"
+            'title' => "Loja"
         ]);    
     }
 
     /**
-     * PARA TESTE
+     * PARA EXEMPLO
      */
     public static function buy(): void
     {

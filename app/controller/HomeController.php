@@ -11,19 +11,15 @@ class HomeController
      */
     public function index(): void
     {
-        $stmt = new \App\Model\User();
-        $user = $stmt->getBy("id_usuario", "1", "apelido");
-        
-        View::addInstance('home', new HomeController);
+        View::addInstance('home', new HomeController());
 
         View::render('home/main', [
-            "title" => "Ínicio",
-            "user" => $user
+            "title" => "Ínicio"
         ]);
     }
 
     /**
-     * PARA TESTE
+     * PARA EXEMPLO
      */
     public static function teste(): void
     {
