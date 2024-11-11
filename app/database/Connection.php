@@ -18,7 +18,13 @@ abstract class Connection
      * e verifica se a conexão foi efetuada com sucesso
      */
     public static function connect(): mysqli {
-        self::$connect = new mysqli("localhost", "root", "", "loja-teste");
+                                    /**
+                                     * "localhost" = Endereço de IP
+                                     * "root" = Usuário
+                                     * "password" = Senha
+                                     * "database" = Nome do Banco de Dados
+                                     */
+        self::$connect = new mysqli("localhost", "root", "password", "database");
 
         if(!self::$connect)
             throw new Exception("Erro na conexão com o banco de dados");
