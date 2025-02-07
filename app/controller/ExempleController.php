@@ -4,16 +4,16 @@ namespace App\Controller;
 
 use App\Core\View;
 
-class HomeController
+class ExempleController
 {
     /**
      * Renderiza a tela inicial da página Home
      */
     public function index(): void
     {
-        View::addInstance('home', new HomeController());
+        View::addInstance('exemple', new ExempleController());
 
-        View::render('home/main', [
+        View::render('exemple', "exemple.template", [
             "title" => "Ínicio"
         ]);
     }
@@ -23,6 +23,6 @@ class HomeController
      */
     public static function teste(): void
     {
-        echo('Chamada de uma instancia de HomeController');    
+        echo('Texto de uma instancia do ' . __CLASS__);    
     }
 }

@@ -6,7 +6,7 @@
     <title><?= $this->e($title); ?></title>
     <?= $this->section('favicon'); ?>
     <link rel="stylesheet" href="resource/css/styles.css">
-    <?= $this->section('css'); ?>
+    <?= $this->section('styles'); ?>
 </head>
 <body>
     <!-- HEADER -->
@@ -20,7 +20,7 @@
 
     <!-- CONTENT PAGE -->
     <section class="content">
-        <?= $this->section('content'); ?>
+        <?= $this->section('welcome'); ?>
     </section>
 
     <!-- FOOTER -->

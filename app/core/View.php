@@ -8,7 +8,7 @@ use League\Plates\Engine;
 class View
 {
     /** 
-     * Lista de instancias dos Controladores
+     * Lista de instancias de Controladores
      */
     private static array $instances = [];
 
@@ -22,17 +22,22 @@ class View
      * 
      * @use League\Plates\Engine
      * @param string $diretory Pasta qual o arquivo *view* pertence
+     * @param string $fileName nome do Arquivo *view*
      * @param array $datas paramentros para serem utilizados nos arquivos *view*
      */
-    public static function render(string $diretory, array $datas = [])
+    public static function render(string $folder, string $fileName, array $datas = [])
     {
-        $path = self::DIRECTORY_VIEW . DIRECTORY_SEPARATOR . $diretory;
+        // Caminho completo do arquivo *view*
+        $path = self::DIRECTORY_VIEW . DIRECTORY_SEPARATOR . $folder . DIRECTORY_SEPARATOR . $fileName;
 
+        // Verificação a existencia do Arquivo
         if(!file_exists($path . ".php")) 
-            throw new Exception("View \"<b>{$diretory}</b>\" não existe");
+            throw new Exception("View \"<b>{$path}</b>\" não existe");
 
-        $view = DIRECTORY_SEPARATOR . $diretory;
+        // Diretorio do template
+        $view = $folder . DIRECTORY_SEPARATOR . $fileName;
 
+        // Inicialização do template League/Plates
         $templates = new Engine(self::DIRECTORY_VIEW);
         $templates->addData(['instance' => self::$instances]);
         echo $templates->render($view, $datas);
