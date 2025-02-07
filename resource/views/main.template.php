@@ -7,6 +7,7 @@
     <?= $this->section('favicon'); ?>
     <link rel="stylesheet" href="resource/css/styles.css">
     <?= $this->section('styles'); ?>
+    <link rel="shortcut icon" href="resource/images/icons/Twitch_Ambush_3.png" type="image/x-icon">
 </head>
 <body>
     <!-- HEADER -->
