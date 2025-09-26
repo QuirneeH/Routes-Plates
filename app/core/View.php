@@ -20,8 +20,8 @@ class View
     /**
      * Método para renderizar a view e passar os parametros para a exibição na *view*
      * 
-     * @use League\Plates\Engine
-     * @param string $diretory Pasta qual o arquivo *view* pertence
+     * @uses League\Plates\Engine
+     * @param string $folder Pasta qual o arquivo *view* pertence
      * @param string $fileName nome do Arquivo *view*
      * @param array $datas paramentros para serem utilizados nos arquivos *view*
      */

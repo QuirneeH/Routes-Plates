@@ -22,7 +22,7 @@ class Transaction extends Connection
     {
         if(self::$connect) {
             self::$connect->rollback();
-            self::$connect = null;
+            self::$connect->close();
         }
     }
 
@@ -33,20 +33,7 @@ class Transaction extends Connection
     {
         if(self::$connect) {
             self::$connect->commit();
-            self::$connect = null;
+            self::$connect->close();
         }
     }
-
-    /**
-     * Encerra a conexão com o banco de dados caso ela exista
-     */
-    public static function desconnect()
-    {
-        if(!isset(self::$connect)) {
-            throw new Exception("Não existe uma conexão nesse momento", 404);
-            
-        } else {
-            self::$connect = null;
-        }
-    }    
 }

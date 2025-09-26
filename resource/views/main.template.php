@@ -22,6 +22,7 @@
     <!-- CONTENT PAGE -->
     <section class="content">
         <?= $this->section('welcome'); ?>
+        <?= $this->section('name'); ?>
     </section>
 
     <!-- FOOTER -->

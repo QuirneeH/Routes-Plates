@@ -25,4 +25,12 @@ class ExempleController
     {
         echo('Texto de uma instancia do ' . __CLASS__);    
     }
+
+    public function readName(string $name)
+    {
+        View::render('exemple', "name.template", [
+            "title" => "Seu Nome",
+            "name" => $name
+        ]);
+    }
 }
