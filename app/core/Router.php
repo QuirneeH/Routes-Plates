@@ -76,12 +76,7 @@ class Router
         /**
          * Config expecificamente por causa do server XAMPP
          */
-        $request_uri = substr($request_uri, 15);
-
-        /**
-         * Config expecificamente por causa do server XAMPP
-         */
-        // $request_uri = substr($request_uri, 7);
+        $request_uri = substr($request_uri, 7);
         
         // Substitui pela URL atual caso exista alteração
         if(!isset($request_uri)) 
